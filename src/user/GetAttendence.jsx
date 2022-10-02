@@ -22,11 +22,9 @@ function GetAttendence(props) {
       .then((response) => {
         const data = response.data.data;
         setEmployees(data);
-        console.log(data);
       })
       .catch((error) => {
         const errorMsg = error;
-        console.log(errorMsg);
       });
   }, []);
 
@@ -52,16 +50,12 @@ function GetAttendence(props) {
       .then((response) => {
         const data = response.data.data;
         setRecord(data);
-        console.log(data);
       })
       .catch((error) => {
         const errorMsg = error.response.data.error;
         setError(errorMsg);
       });
   }
-
-
-
 
   return (
     <div>

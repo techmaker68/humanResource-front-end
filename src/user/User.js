@@ -17,7 +17,6 @@ const changeHandler = (event) => {
 };
   
   let user =JSON.parse(localStorage.getItem('user'))
-  console.log()
 
 function onFinish(){
 
@@ -33,13 +32,11 @@ function onFinish(){
   })
   .then((response) => {
     const login = response.data;
-    console.log(login)
    
 
   })
   .catch((error) => {
     const errorMsg = error;
-    console.log(errorMsg)
 
     setError(errorMsg.response.data);
 

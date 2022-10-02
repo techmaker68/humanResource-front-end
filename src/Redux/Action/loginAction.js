@@ -28,8 +28,7 @@ export const fetchloginFailure = (error) => {
 }
 
 export const fetchLoginData = (v) => {
-  // return (dispatch, values) => {
-    // dispatch(fetchloginRequest)
+
     axios
       .post(`${baseUrl}/login`, {
         headers: {
@@ -40,12 +39,8 @@ export const fetchLoginData = (v) => {
       })
       .then((response) => {
         const login = response.data
-        // dispatch(fetchloginSuccess(login))
       })
       .catch((error) => {
         const errorMsg = error.message
-        // dispatch(fetchloginFailure(errorMsg))
       })
-    // console.log("Success:", values)
-  // }
 }

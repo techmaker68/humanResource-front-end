@@ -33,21 +33,7 @@ export const fetchUsersFailure = (error) => {
   }
 }
 
-// export const getUsersData = (dispatch) => {
-//   return baseApi.User.getUsers().then(
-//     (response) => {
-//       console.log("lllllhhh", response)
-//       dispatch({ type: FETCH_USERS, payload: response })
-//     },
-//     (error) => {
-//       error.response &&
-//         error.response.data.reason &&
-//         error.response.data.reason == "authentication" &&
-//         dispatch({ type: "LOG_OUT" })
-//       return Promise.reject()
-//     }
-//   )
-// }
+
 
 export const fetchUsers = () => {
   return (dispatch) => {

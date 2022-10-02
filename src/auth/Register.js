@@ -22,7 +22,6 @@ function Register() {
       })
       .then((response) => {
         const login = response.data;
-        console.log(login)
         localStorage.setItem('user', JSON.stringify(login));
         navigate("/dashboard");
       })
@@ -33,7 +32,6 @@ function Register() {
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
 
   return (

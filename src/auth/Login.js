@@ -22,7 +22,6 @@ function Login() {
       })
       .then((response) => {
         const login = response.data;
-        console.log(login)
         localStorage.setItem('user', JSON.stringify(login));
         navigate("/dashboard");
       })
@@ -33,7 +32,6 @@ function Login() {
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
 
   return (

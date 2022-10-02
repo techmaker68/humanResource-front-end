@@ -22,11 +22,9 @@ function ChallengeThree(props) {
       .then((response) => {
         const data = response.data;
         setData(data);
-        console.log("d is", data);
       })
       .catch((error) => {
         const errorMsg = error;
-        console.log(errorMsg);
       });
   }
   return (
